@@ -8,10 +8,12 @@ let intChars = '0123456789';
 
 let BLOCK_START = '{%';
 let BLOCK_END = '%}';
-let VARIABLE_START = '{{';
-let VARIABLE_END = '}}';
-let COMMENT_START = '{#';
-let COMMENT_END = '#}';
+
+// 解决Emberjs标签`{{}}`冲突问题，自定义模板占位符
+var VARIABLE_START = '{$';
+var VARIABLE_END = '$}';
+var COMMENT_START = '{@';
+var COMMENT_END = '@}';
 
 let TOKEN_STRING = 'string';
 let TOKEN_WHITESPACE = 'whitespace';
