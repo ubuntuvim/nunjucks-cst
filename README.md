@@ -19,6 +19,15 @@ templating engine for javascript. It is heavily inspired by
 
 修改后使用`nunjucks`模板引擎解析的hexo插件会解析失败，所以需要同步修改依赖`nunjucks`模板引擎的hexo插件。
 
+**另外有一点很重要，如果你的其他hexo查询有依赖这个模板引擎，还必须要修改插件中的解析占位符。否则你安装的hexo查询将无效，比如[xcoding](http://xcoding.tech)中的搜索和RSS插件就是依赖这个模板引擎。所以需要修改他们的解析代码中的占位符。
+如果你不想修改可以直接使用我已经修改好的插件。**
+
+已经修改过的插件：
+
+* [hexo-generator-feed-cst](https://github.com/ubuntuvim/hexo-generator-feed-cst)
+* [hexo-generator-search-cst](https://github.com/ubuntuvim/hexo-generator-search-cst)
+
+
 之所以这么做是因为[hexo](http://hexo.io)使用`nunjucks`解析生成静态HTML。然后我的主站[xcoding](http://xcoding.tech)使用了GitHub+hexo搭建。然后博客主要用于记录[EmberJS](http://emberjs.com)相关文章，EmberJS很多标签都是使用`{{}}`，与模板引擎的占位符冲突。
 
 冲突出现的问题如下：
