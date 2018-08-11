@@ -1,7 +1,7 @@
 {
   "name": "nunjucks-cst",
   "description": "A powerful templating engine with inheritance, asynchronous control, and more (jinja2 inspired)",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "author": "https://github.com/ubuntuvim",
   "dependencies": {
     "a-sync-waterfall": "^1.0.0",
@@ -66,7 +66,7 @@
     "node": ">= 6.9.0 <= 11.0.0-0"
   },
   "scripts": {
-    "build:transpile": "babel nunjucks-cst --out-dir .",
+    "build:transpile": "babel nunjucks/src --out-dir nunjucks/src",
     "build:bundle": "node scripts/bundle.js",
     "build": "npm run build:transpile && npm run build:bundle",
     "codecov": "codecov",
